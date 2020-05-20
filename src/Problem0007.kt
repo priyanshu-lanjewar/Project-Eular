@@ -7,18 +7,18 @@ fun main() {
     var prime = 2
     while (no != 10001) {
         var isPrime = true
-        for (i in sqrt((number).toDouble()).toInt() downTo 2) {
+        for (i in 3..sqrt((number).toDouble()).toInt()  step 2) {
             if (number % i == 0) {
                 isPrime = false
+                break
             }
         }
-
         if (isPrime) {
             prime = number
             no++
         }
 
-        number++
+        number+=2
     }
     println("The 10001st prime number is $prime")
 }
